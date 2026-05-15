@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 4. Reveal Animations on Scroll (Intersection Observer)
-    const revealElements = document.querySelectorAll('section, .service-card, .portfolio-item, .bento-item, .process-card, .pricing-card');
+    const revealElements = document.querySelectorAll('section, .service-card, .portfolio-item, .bento-item, .process-card, .pricing-card, .pricing-card-modern, .pricing-card-minimal');
     
     const revealCallback = (entries, observer) => {
         entries.forEach(entry => {
@@ -105,6 +105,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
+    }
+
+    // 7. Accordion Toggle
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items (optional, but cleaner)
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // 8. Testimonial Carousel
+    const carousel = document.getElementById('testimonialCarousel');
+    const prevBtn = document.getElementById('prevTestimonial');
+    const nextBtn = document.getElementById('nextTestimonial');
+
+    if (carousel && prevBtn && nextBtn) {
+        const scrollAmount = () => {
+            const card = carousel.querySelector('.testimonial-card');
+            return card.offsetWidth + 24; // Card width + gap
+        };
+
+        nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: scrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: -scrollAmount(),
+                behavior: 'smooth'
+            });
+        });
     }
 
     console.log('Illustra Logic & Animations Initialized');
