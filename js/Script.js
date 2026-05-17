@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetElement) {
                 e.preventDefault();
                 navLinks.classList.remove('active'); // Close mobile menu if open
+                if (mobileToggle) {
+                    mobileToggle.classList.remove('active');
+                }
                 
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
