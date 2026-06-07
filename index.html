@@ -71,7 +71,9 @@
           </p>
 
           <div class="hero-actions">
-            <a href="https://wa.me/6285701219348" class="btn btn-light">Konsultasi Gratis</a>
+            <a href="https://wa.me/6285701219348" class="btn btn-light"
+              >Konsultasi Gratis</a
+            >
           </div>
         </div>
 
@@ -287,16 +289,16 @@
         </div>
 
         <div class="portfolio-filters">
-          <a href="#" class="filter-link active">All</a>
-          <a href="#" class="filter-link">Personal</a>
-          <a href="#" class="filter-link">Commissioned</a>
-          <a href="#" class="filter-link">Illusions</a>
+          <a href="#" class="filter-link active" data-filter="all">All</a>
+          <a href="#" class="filter-link" data-filter="personal">Personal</a>
+          <a href="#" class="filter-link" data-filter="commissioned">Commissioned</a>
+          <a href="#" class="filter-link" data-filter="illusions">Illusions</a>
         </div>
 
         <div class="portfolio-grid bento">
-          <div class="portfolio-item span-2">
+          <div class="portfolio-item span-2" data-category="commissioned">
             <img
-              src="assets/images/portfolio-1.webp"
+              src="assets/images/portfolio/IMG_4905.webp"
               alt="Featured Illustration"
             />
             <div class="portfolio-overlay">
@@ -306,8 +308,8 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="assets/images/portfolio-2.webp" alt="Workspace" />
+          <div class="portfolio-item" data-category="illusions">
+            <img src="assets/images/portfolio/IMG_4906.webp" alt="Workspace" />
             <div class="portfolio-overlay">
               <div class="portfolio-info">
                 <span>Isometric</span>
@@ -315,8 +317,8 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item tall">
-            <img src="assets/images/portfolio-3.webp" alt="Character" />
+          <div class="portfolio-item tall" data-category="personal">
+            <img src="assets/images/portfolio/IMG_4908.webp" alt="Character" />
             <div class="portfolio-overlay">
               <div class="portfolio-info">
                 <span>Character</span>
@@ -324,8 +326,8 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="assets/images/portfolio-4.webp" alt="Portrait" />
+          <div class="portfolio-item" data-category="personal">
+            <img src="assets/images/portfolio/IMG_4909.webp" alt="Portrait" />
             <div class="portfolio-overlay">
               <div class="portfolio-info">
                 <span>Portrait</span>
@@ -333,8 +335,8 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="assets/images/portfolio-5.webp" alt="Abstract" />
+          <div class="portfolio-item" data-category="illusions">
+            <img src="assets/images/portfolio/IMG_4910.webp" alt="Abstract" />
             <div class="portfolio-overlay">
               <div class="portfolio-info">
                 <span>Abstract</span>
@@ -342,8 +344,8 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item span-2">
-            <img src="assets/images/portfolio-1.webp" alt="Landscape" />
+          <div class="portfolio-item span-2" data-category="personal">
+            <img src="assets/images/portfolio/IMG_4911.webp" alt="Landscape" />
             <div class="portfolio-overlay">
               <div class="portfolio-info">
                 <span>Landscape</span>
@@ -351,8 +353,8 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="assets/images/portfolio-2.webp" alt="UI Asset" />
+          <div class="portfolio-item" data-category="commissioned">
+            <img src="assets/images/portfolio/IMG_4912.webp" alt="UI Asset" />
             <div class="portfolio-overlay">
               <div class="portfolio-info">
                 <span>UI Asset</span>
@@ -360,8 +362,8 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="assets/images/portfolio-3.webp" alt="Mascot Design" />
+          <div class="portfolio-item" data-category="commissioned">
+            <img src="assets/images/portfolio/IMG_4913.webp" alt="Mascot Design" />
             <div class="portfolio-overlay">
               <div class="portfolio-info">
                 <span>Character</span>
@@ -369,8 +371,8 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="assets/images/portfolio-4.webp" alt="Vector Art" />
+          <div class="portfolio-item" data-category="illusions">
+            <img src="assets/images/portfolio/IMG_4914.webp" alt="Vector Art" />
             <div class="portfolio-overlay">
               <div class="portfolio-info">
                 <span>Vector</span>
@@ -499,14 +501,16 @@
               <h3 class="plan-name">Personal</h3>
               <div class="plan-price">
                 <span class="currency">Rp</span>
-                <span class="amount">500</span>
+                <span class="amount">150</span>
                 <span class="period">rb/karya</span>
               </div>
               <p class="plan-desc">
                 Cocok untuk individu yang ingin mencoba ilustrasi kustom
                 sederhana.
               </p>
-              <a href="https://wa.me/6285701219348" class="btn btn-soft">Coba Sekarang</a>
+              <a href="https://wa.me/6285701219348" class="btn btn-soft"
+                >Coba Sekarang</a
+              >
 
               <ul class="plan-features">
                 <li><i data-lucide="check-circle-2"></i> 1 Sketsa Dasar</li>
@@ -526,14 +530,16 @@
               <h3 class="plan-name">Studio</h3>
               <div class="plan-price">
                 <span class="currency">Rp</span>
-                <span class="amount">1.2</span>
-                <span class="period">jt/karya</span>
+                <span class="amount">300</span>
+                <span class="period">rb/karya</span>
               </div>
               <p class="plan-desc">
                 Solusi tepat untuk startup dan brand yang butuh aset visual
                 konsisten.
               </p>
-              <a href="https://wa.me/6285701219348" class="btn btn-soft">Pilih Paket</a>
+              <a href="https://wa.me/6285701219348" class="btn btn-soft"
+                >Pilih Paket</a
+              >
 
               <ul class="plan-features">
                 <li>
@@ -559,14 +565,16 @@
               <h3 class="plan-name">Agency</h3>
               <div class="plan-price">
                 <span class="currency">Rp</span>
-                <span class="amount">2.5</span>
-                <span class="period">jt/scene</span>
+                <span class="amount">500</span>
+                <span class="period">rb/scene</span>
               </div>
               <p class="plan-desc">
                 Untuk agensi besar dengan kebutuhan volume ilustrasi yang
                 tinggi.
               </p>
-              <a href="https://wa.me/6285701219348" class="btn btn-soft">Hubungi Kami</a>
+              <a href="https://wa.me/6285701219348" class="btn btn-soft"
+                >Hubungi Kami</a
+              >
 
               <ul class="plan-features">
                 <li>
@@ -617,8 +625,9 @@
                   <div class="card-body">
                     <h3>Sangat Memuaskan</h3>
                     <p>
-                      "ibl.inkspace benar-benar memahami visi kami. Hasil akhirnya
-                      melampaui ekspektasi dan prosesnya sangat lancar."
+                      "ibl.inkspace benar-benar memahami visi kami. Hasil
+                      akhirnya melampaui ekspektasi dan prosesnya sangat
+                      lancar."
                     </p>
                   </div>
                   <div class="card-bottom">

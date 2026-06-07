@@ -73,7 +73,6 @@
 }
 
 .organic-pattern-bg .service-card-modern:hover,
-.organic-pattern-bg .pricing-card-minimal:hover,
 .organic-pattern-bg .testimonial-card.premium:hover .card-back {
   background-color: var(--white);
   color: var(--primary-color);
@@ -84,11 +83,6 @@
 .organic-pattern-bg .service-card-modern:hover h3,
 .organic-pattern-bg .service-card-modern:hover p,
 .organic-pattern-bg .service-card-modern:hover i,
-.organic-pattern-bg .pricing-card-minimal:hover .plan-name,
-.organic-pattern-bg .pricing-card-minimal:hover .plan-price *,
-.organic-pattern-bg .pricing-card-minimal:hover .plan-desc,
-.organic-pattern-bg .pricing-card-minimal:hover .plan-features li,
-.organic-pattern-bg .pricing-card-minimal:hover .plan-features li i,
 .organic-pattern-bg .testimonial-card.premium:hover .card-back h3,
 .organic-pattern-bg .testimonial-card.premium:hover .card-back p,
 .organic-pattern-bg .testimonial-card.premium:hover .card-back span,
@@ -116,15 +110,35 @@
   color: var(--primary-color);
 }
 
-/* Button on hover */
-.organic-pattern-bg .pricing-card-minimal:hover .btn-soft {
-  background-color: var(--primary-color);
-  color: var(--white);
+/* All pricing cards hover UX - stay dark, glow, text stays white */
+.organic-pattern-bg .pricing-card-minimal:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 20px 50px rgba(199, 255, 26, 0.15) !important;
+  transform: translateY(-20px) !important;
 }
 
 .organic-pattern-bg .pricing-card-minimal.featured {
   background-color: var(--primary-color);
   border: 2px solid var(--accent-color);
+  transform: scale(1.02);
+  z-index: 2;
+}
+
+.organic-pattern-bg .pricing-card-minimal.featured:hover {
+  transform: scale(1.02) translateY(-20px) !important;
+}
+
+/* Make features list icons pop on hover for all pricing cards */
+.organic-pattern-bg .pricing-card-minimal:hover .plan-features li i {
+  color: var(--accent-color) !important;
+}
+
+/* All pricing card buttons stay accent color on hover with added glow */
+.organic-pattern-bg .pricing-card-minimal:hover .btn-soft {
+  background-color: var(--accent-color) !important;
+  color: var(--primary-color) !important;
+  box-shadow: 0 10px 20px rgba(199, 255, 26, 0.3) !important;
 }
 
 .combined-pattern-wrapper {
@@ -295,8 +309,6 @@ h4,
   content: ".";
   color: var(--accent-color);
 }
-
-
 
 .nav-links {
   display: flex;
@@ -776,6 +788,10 @@ h4,
   border-radius: 24px;
   overflow: hidden;
   transition: var(--transition);
+}
+
+.portfolio-item.hidden {
+  display: none;
 }
 
 .portfolio-item.span-2 {
@@ -1671,7 +1687,10 @@ h4,
     font-size: 28px;
     font-weight: 700;
     padding: 12px 24px;
-    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      color 0.3s ease;
     opacity: 0;
     transform: translateY(-20px);
   }
@@ -1700,7 +1719,9 @@ h4,
     height: 2px;
     background: var(--primary-color);
     margin-bottom: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;
   }
 
   .mobile-toggle span:last-child {
@@ -1800,14 +1821,26 @@ h4,
   .nav-links.active .nav-link {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition:
+      opacity 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+      transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  .nav-links.active .nav-link:nth-child(1) { transition-delay: 0.15s; }
-  .nav-links.active .nav-link:nth-child(2) { transition-delay: 0.22s; }
-  .nav-links.active .nav-link:nth-child(3) { transition-delay: 0.29s; }
-  .nav-links.active .nav-link:nth-child(4) { transition-delay: 0.36s; }
-  .nav-links.active .nav-link:nth-child(5) { transition-delay: 0.43s; }
+  .nav-links.active .nav-link:nth-child(1) {
+    transition-delay: 0.15s;
+  }
+  .nav-links.active .nav-link:nth-child(2) {
+    transition-delay: 0.22s;
+  }
+  .nav-links.active .nav-link:nth-child(3) {
+    transition-delay: 0.29s;
+  }
+  .nav-links.active .nav-link:nth-child(4) {
+    transition-delay: 0.36s;
+  }
+  .nav-links.active .nav-link:nth-child(5) {
+    transition-delay: 0.43s;
+  }
 
   .mobile-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
